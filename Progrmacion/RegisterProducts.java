@@ -19,9 +19,11 @@ public class RegisterProducts
 
     public void showProducts()
     {
+        int i=0;
         for (Product product : Products) 
         {
-            System.out.println(product.getCantAvailable() + " "+ product.getName() + "  $ " + product.getPrice());
+            i++;
+            System.out.println( i + "- " + product.getCantAvailable() + " "+ product.getName() + "  $ " + product.getPrice());
         }
     }
 
