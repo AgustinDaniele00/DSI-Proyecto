@@ -15,6 +15,8 @@ public class RegisterSales
         System.out.println("");
         for (Sale sales : sale) 
         {
+            System.out.println("**Detalles de la compra**");
+            System.out.println("-----------------------------------------------");
             i++;
             System.out.println( "-Fecha: " + sales.getDate() + "\n" 
                                 + "-Numero de venta: " + i + "\n" 
