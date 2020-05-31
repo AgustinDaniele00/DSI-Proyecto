@@ -15,6 +15,8 @@ public class SellManager
         RegisterOrder registerOrder = new RegisterOrder();
         int itemNum;
         int deciding;
+        String email = "";
+        String pass = "";
         boolean response = false;
         String date = "";
         int answer;
@@ -26,7 +28,13 @@ public class SellManager
     
         do
         {
-            response = user.logerUser("EMAIL","CONTRASENIA");
+            System.out.println("Email: ");
+            email = input.nextLine();
+
+            System.out.println("Password: ");
+            pass = input.nextLine();
+
+            response = user.logerUser(email,pass);
     
         }while(response == false);
     

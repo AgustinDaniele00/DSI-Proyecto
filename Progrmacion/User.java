@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+
 public class User
 {
     private String name;
@@ -127,13 +128,22 @@ public class User
     
     public boolean logerUser(String email, String password)
     {
-        if (email == getEmail() && password == getPass())
+        if (getEmail().compareTo(email) == 0)
         {
-            return true;
+            if (getPass().compareTo(password) == 0)
+            {
+                return true;
+            }
+            else 
+            {
+                System.out.println("El email o la clave son incorrectas");
+                return false;
+            }
+            
         }
         else
         {
-            System.out.println("Los datos son incorrectos");
+            System.out.println("El email o la clave son incorrectas");
             return false;
         }
     }
