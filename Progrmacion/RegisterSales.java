@@ -21,15 +21,20 @@ public class RegisterSales
                 System.out.println( "-Fecha: " + sales.getDate() + "\n" 
                                     + "-Numero de venta: " + sales.gerSellNumber()+ "\n" 
                                     + "-Usuario: " + sales.getUser());
-                System.out.println("-Productos: ");                  
+                System.out.println("-Productos: ");
+                        
                 for (ProductCart productCart : sales.getProductCart())   
                 {
                     System.out.print("* " + productCart.getCantCart() + " " + productCart.getName() + " " + productCart.getPrice()*productCart.getCantCart() + "\n");
                 }
                 System.out.println("-Monto total: " + sales.getTotalMount());
+                            
+                sales.setSellReady(true);
             }
-            
-            sales.setSellReady(true);
+            else
+            {
+                System.out.println("No hay compras realizadas");
+            }
         } 
     }
 }
