@@ -66,6 +66,12 @@ public class User
         return userName;
     }
 
+    public ArrayList <ProductCart> resetCart()
+    {
+       totalCart = 0; 
+       return cart = new ArrayList<ProductCart>();
+    }
+
     public ArrayList<ProductCart> getCart()
     {
         return cart;

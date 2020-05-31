@@ -6,14 +6,16 @@ public class Sale
     private ArrayList<ProductCart> products = new ArrayList<ProductCart>();
     private String user;
     private float totalMount;
+    private int sellNumber;
     
     
-    public Sale (String date, String user, float totalMount,ArrayList<ProductCart> productos)
+    public Sale (String date, String user, float totalMount,ArrayList<ProductCart> productos, int sellNumber)
     {
         this.date = date;
         this.user = user;
         this.totalMount = totalMount;
         this.products = productos;
+        this.sellNumber = sellNumber;
     }
 
     public String getDate()
@@ -26,14 +28,19 @@ public class Sale
         return products;
     }
 
-    public String getUsuario()
+    public String getUser()
     {
         return user;
     }
 
-    public float getMontoTotal()
+    public float getTotalMount()
     {
         return totalMount;
+    }
+
+    public int gerSellNumber()
+    {
+        return sellNumber;
     }
 }
 

@@ -4,19 +4,20 @@ public class RegisterOrder
 {
     private ArrayList<Order> order = new ArrayList<Order>();
 
-    public void registerOrders(String date, ArrayList<ProductCart> products)
+    public void registerOrders(String date, ArrayList<ProductCart> products, int orderNumber)
     {
-        order.add(new Order(date, products));
+        order.add(new Order(date, products, orderNumber));
     }
 
     public void showOrder()
     {
         System.out.println("");
+        System.out.println("**Detalles del pedido**");
         for (Order orders : order) 
         {
-            System.out.println("**Detalles del pedido**");
             System.out.println("-----------------------------------------------");
             System.out.println( "-Fecha: " + orders.getDate());
+            System.out.println("-Numero de pedido: " + orders.getOrderNumbre());
             System.out.println("-Productos: ");                  
             for (ProductCart productCart : orders.getProductCart())   
             {
