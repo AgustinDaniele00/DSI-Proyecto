@@ -7,6 +7,7 @@ public class Sale
     private String user;
     private float totalMount;
     private int sellNumber;
+    private boolean sellReady;
     
     
     public Sale (String date, String user, float totalMount,ArrayList<ProductCart> productos, int sellNumber)
@@ -16,6 +17,7 @@ public class Sale
         this.totalMount = totalMount;
         this.products = productos;
         this.sellNumber = sellNumber;
+        this.sellReady = false;
     }
 
     public String getDate()
@@ -41,6 +43,16 @@ public class Sale
     public int gerSellNumber()
     {
         return sellNumber;
+    }
+
+    public boolean getSellReady()
+    {
+        return sellReady;
+    }
+
+    public void setSellReady(boolean sellReady)
+    {
+        this.sellReady = sellReady;
     }
 }
 

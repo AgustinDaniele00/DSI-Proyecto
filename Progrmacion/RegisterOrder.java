@@ -12,11 +12,12 @@ public class RegisterOrder
     public void showOrder()
     {
         System.out.println("");
+        System.out.println("**Detalles del pedido**");
+
         for (Order orders : order) 
         {
             if (orders.gerOrderReady() == false)
             {
-                System.out.println("**Detalles del pedido**");
                 System.out.println("-----------------------------------------------");
                 System.out.println( "-Fecha: " + orders.getDate());
                 System.out.println("-Numero de pedido: " + orders.getOrderNumbre());
