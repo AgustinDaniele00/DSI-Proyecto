@@ -6,10 +6,20 @@ public class RegisterProducts
 
     public void registerProducts()
     {
-        Products.add(new Product(1, "Cafetera", 3300, 5, "Philips"));
-        Products.add(new Product(2, "Celular", 25600, 5, "Lg"));
-        Products.add(new Product(3, "Televisor", 43570, 5, "Noblex"));
-        Products.add(new Product(4, "Remera", 2500, 5, "Nike"));
+        boolean register = false;
+        
+        if (register == false)
+        {
+            Products.add(new Product(1, "Cafetera", 3300, 5, "Philips"));
+            Products.add(new Product(2, "Celular", 25600, 5, "Lg"));
+            Products.add(new Product(3, "Televisor", 43570, 5, "Noblex"));
+            Products.add(new Product(4, "Remera", 2500, 5, "Nike"));
+
+            register = true;
+        }
+
+        showProducts();
+        verifyStock();
     }
 
     public ArrayList<Product> getProducts()

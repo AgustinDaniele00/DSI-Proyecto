@@ -10,7 +10,7 @@ public class SellManager
         Scanner input = new Scanner(System.in);
         RegisterProducts registerProducts = new RegisterProducts();
         Cart cart = new Cart();
-        User user = new User("NOMBRE", "APELLIDO", "DNI", "TELEFONO", "PAIS", "EMAIL", "NOMBRE USUARIO", "CONTRASENIA");
+        User user = new User("NOMBRE", "APELLIDO", "DNI", "TELEFONO", "PAIS", "EMAIL", "NOMBRE USUARIO", "CLAVE");
         RegisterSales registerSales = new RegisterSales();
         RegisterOrder registerOrder = new RegisterOrder();
         int itemNum;
@@ -20,18 +20,16 @@ public class SellManager
         boolean response = false;
         String date = "";
         int answer;
- 
-        registerProducts.registerProducts();
 
         System.out.println("");
         System.out.println("Ingrese Usuario");
     
         do
         {
-            System.out.println("Email: ");
+            System.out.println("Email: (EMAIL)");
             email = input.nextLine();
 
-            System.out.println("Password: ");
+            System.out.println("Password: (CLAVE)");
             pass = input.nextLine();
 
             response = user.logerUser(email,pass);
@@ -59,8 +57,8 @@ public class SellManager
             if (answer == 1)
             {
                 System.out.println("Listado de productos");
-                registerProducts.showProducts();
-                registerProducts.verifyStock();
+
+                registerProducts.registerProducts();
     
                 do
                 {
