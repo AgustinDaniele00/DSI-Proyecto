@@ -1,0 +1,34 @@
+Enviamos: Listado de productos vendidos.
+
+Estructura:
+
+{
+  "articulosDespachadosdos": 
+  [
+        {
+		"id": 
+		"nombre": 
+		"marca": 
+		"precio": 
+		"descripcion":
+		"cantidad":
+        }
+  ]
+}
+  
+Ejemplo:
+{
+  "articulosDespachadosdos": 
+  [
+        {
+		"id": "1";
+		"nombre": "Remera clasica";
+		"marca": "Nike"
+		"precio": "$1000";
+		"descripcion": "Remera de algodón";
+		"cantidad": "1";
+        }
+  ]
+}
+
+Recibimos:Confirmacion de pago del pedido e ID Venta.
